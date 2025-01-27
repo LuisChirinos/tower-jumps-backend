@@ -9,7 +9,7 @@ import numpy as np
 # For clustering
 from sklearn.cluster import DBSCAN
 
-# Optionally (for border distance checks), you might use:
+# To improve (for border distance checks), we might use:
 # from shapely.geometry import Point
 # import geopandas as gpd
 
@@ -293,7 +293,7 @@ def process_csv(
                     cluster_subset.append(row)
             final_state = most_common_state(cluster_subset)
 
-        # Optional: check distance to border shapefile (commented out example)
+        # To improve: check distance to border shapefile (commented out example)
         # if border_shapefile:
         #     dist_to_border = distance_from_border(centroid_lat, centroid_lon, border_shapefile)
         #     if dist_to_border < 100.0:  # e.g. 100 meters
@@ -317,7 +317,7 @@ def process_csv(
             'count_interpolated': count_interpolated
         }
 
-    # (Optionally, define a function for border distance if you have shapefiles)
+    # (To Improve, define a function for border distance if you have shapefiles)
     """
     def distance_from_border(lat, lon, shapefile_path):
         # Example: uses shapely and geopandas to measure distance in degrees or meters
